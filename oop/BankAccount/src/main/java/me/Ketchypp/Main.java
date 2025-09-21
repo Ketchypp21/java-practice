@@ -9,5 +9,10 @@ public class Main {
         account.withdraw(200);
         account.printInfo(); // должно показать: владелец Alice, баланс 1300
 
+
+        BankAccount account2 = new BankAccount("Bob", 0);
+        account2.deposit(700);
+        account2.withdraw(800);
+        account2.printInfo();
     }
 }

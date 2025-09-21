@@ -1,9 +1,9 @@
 package me.Ketchypp;
 
 public class Book {
-    String title;
-    String author;
-    int year;
+    private String title;
+    private String author;
+    private int year;
 
     Book(String title, String author, int year) {
         this.title = title;

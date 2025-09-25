@@ -1,9 +1,9 @@
 package me.Ketchypp;
 
 public class Book {
-    private String title;
-    private String author;
-    private int year;
+    private final String title;
+    private final String author;
+    private final int year;
 
     Book(String title, String author, int year) {
         this.title = title;
@@ -12,6 +12,10 @@ public class Book {
     }
 
     void printInfo() {
-        System.out.println("Title: " + title + " Author: " + author + " Year: " + year);
+        System.out.println("Title: " + title + "\nAuthor: " + author + "\nYear: " + year);
+    }
+
+    void printTitle() {
+        System.out.println(title);
     }
 }

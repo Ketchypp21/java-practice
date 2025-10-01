@@ -5,37 +5,15 @@ public class Matrix {
     private int maxElement;
     private int minElement;
     private int sum;
-    public double average;
+    private double average;
 
     public Matrix(int n){
-        maxElement = 0;
-        minElement = 10000000;
         matrix = new int[n];
+        maxElement = matrix[0];
+        minElement = matrix[0];
 
         for (int i = 0; i < matrix.length; i++) {
             matrix[i] = (int) Math.round((Math.random() * 1000) - 1);
-        }
-    }
-
-    public void maxElement(){
-        for (int j: matrix) {
-            if (j > maxElement) {
-                maxElement = j;
-            }
-        }
-    }
-
-    public void minElement(){
-        for (int j: matrix) {
-            if (j < minElement) {
-                minElement = j;
-            }
-        }
-    }
-
-    public void sum(){
-        for (int j: matrix) {
-            sum += j;
         }
     }
 
@@ -51,11 +29,21 @@ public class Matrix {
         }
     }
 
-    public void average(){
+    public void calculate() {
+        maxElement = matrix[0];
+        minElement = matrix[0];
+        sum = 0;
+
+        for (int value : matrix) {
+            if (value > maxElement) maxElement = value;
+            if (value < minElement) minElement = value;
+            sum += value;
+        }
         average = (double) sum / matrix.length;
     }
 
-    public int[] getMatrix() {
+    public int[] getSortedMatrix() {
+        sorter();
         return matrix;
     }
 

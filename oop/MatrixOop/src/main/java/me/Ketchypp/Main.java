@@ -18,11 +18,7 @@ public class Main {
         Scanner scanner = new Scanner(System.in);
         int n = scanner.nextInt();
         Matrix matrix = new Matrix(n);
-        matrix.sorter();
-        matrix.maxElement();
-        matrix.minElement();
-        matrix.sum();
-        matrix.average();
+        matrix.calculate();
         Printer printer = new Printer();
         printer.print(matrix);
     }
